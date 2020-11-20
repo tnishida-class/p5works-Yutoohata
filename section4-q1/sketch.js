@@ -10,7 +10,8 @@ function setup(){
 
 function draw(){
   background(160, 192, 255);
-  count = (count + 1) % cycle;
+  if(count < 50){count = (count + 1) % cycle;}
+  else{count = 1 - count;}
 
   // BLANK[1]
   ellipse(width / 2, height / 2, count);
